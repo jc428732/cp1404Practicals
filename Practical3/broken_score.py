@@ -11,3 +11,4 @@ def score_to_grade(score):
 
 user_score = float(input("Enter score: "))
 result = score_to_grade(user_score)
+print(result)
