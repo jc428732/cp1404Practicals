@@ -2,13 +2,6 @@
 CP1404/CP5632 Practical
 Starter code for cumulative total income program
 """
-def print_report(time_period_type, values):
-    print("\nIncome Report\n-------------")
-    total = 0
-    for time_period in range(1, len(values) + 1):
-        value = values[time_period - 1]
-        total += value
-        print("{} {:2} - Income: ${:10.2f} Total: ${:10.2f}".format(time_period_type, time_period, value, total))
 
 
 def main():
@@ -21,5 +14,15 @@ def main():
         incomes.append(income)
 
     print_report("Month", incomes)
+
+
+def print_report(time_period_type, values):
+    print("\nIncome Report\n-------------")
+    total = 0
+    for time_period in range(1, len(values) + 1):
+        value = values[time_period - 1]
+        total += value
+        print("{} {:2} - Income: ${:10.2f} Total: ${:10.2f}".format(time_period_type, time_period, value, total))
+
 
 main()
