@@ -1,3 +1,11 @@
+<Widget>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    color: 0, 0, 0, 1
 BoxLayout:
     orientation: 'vertical'
     BoxLayout:
@@ -5,13 +13,18 @@ BoxLayout:
         TextInput:
             id: input_number
             on_text: app.handle_convert(input_number.text)
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
         BoxLayout:
             orientation: 'vertical'
             Button:
                 text: 'Up'
+                background_normal: ''
                 on_press: app.handle_increment(input_number.text, 1)
             Button:
                 text: 'Down'
+                background_normal: ''
                 on_press: app.handle_increment(input_number.text, -1)
 #    Button:
 #        id: convert
