@@ -1,4 +1,4 @@
-from car import Car
+from practical07.car import Car
 
 print("Let's drive!")
 vehicle = Car(100, str(input("Enter your car name: ")))

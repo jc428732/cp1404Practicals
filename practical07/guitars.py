@@ -1,5 +1,5 @@
 
-from guitar import Guitar
+from practical07.guitar import Guitar
 
 guitars = []
 vintage_string = ""
