@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical
 File renaming and os examples
 """
-import shutil
+
 import os
 
 
