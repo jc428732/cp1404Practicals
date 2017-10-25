@@ -7,4 +7,5 @@ def calculate_number_of_blocks(number_of_rows):
     if number_of_rows >= 1:
         return number_of_rows + calculate_number_of_blocks(number_of_rows - 1)
     return 0
+
 print(calculate_number_of_blocks(6))
