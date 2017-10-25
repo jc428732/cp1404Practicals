@@ -24,11 +24,10 @@ def main():
         # ignore directories, just process files
             if not os.path.isdir(filename):
                 new_name = get_fixed_filename(filename)
-                print(new_name)
 
             # Option 1: rename file to new name - in place
                 try:
-                    os.rename(filename, new_name)
+                    os.rename("{}/{}".format(dir_name, filename), "{}/{}".format(dir_name, new_name))
                 except FileExistsError:
                     pass
                 except FileNotFoundError:
@@ -39,11 +38,11 @@ def main():
 
             # Processing subdirectories using os.walk()
 
-            # os.chdir('..')  # .. means "up" one directory
-            # for dir_name, subdir_list, file_list in os.walk('.'):
-            #     print("In", dir_name)
-            #     print("\tcontains subdirectories:", subdir_list)
-            #     print("\tand files:", file_list)
+            #os.chdir('..')  # .. means "up" one directory
+            #for dir_name, subdir_list, file_list in os.walk('.'):
+                #print("In", dir_name)
+                #print("\tcontains subdirectories:", subdir_list)
+                #print("\tand files:", file_list)
 
 
 def get_fixed_filename(filename):
